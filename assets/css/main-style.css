@@ -1,0 +1,394 @@
+@font-face {
+    font-family: Averta;
+    src: url(../fonts/FontsFree-Net-AvertaDemoPECuttedDemo-Regular.ttf)
+}
+
+/*================
+  CSS Reset Tool v2.0
+================*/
+
+/* http://meyerweb.com/eric/tools/css/reset/    v2.0 | 20110126 
+  License: none (public domain) 
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1.5;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/*================
+  Typography
+================*/
+
+h2, h3 {
+    line-height: normal;
+    letter-spacing: normal;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 1.5rem;    
+}
+
+h3 {
+    font-size: 1rem;
+}
+
+small {
+    font-size: 0.8rem;
+    font-weight: 400;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Averta, sans-serif !important;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    color: rgb(81, 73, 73);
+}
+
+a {
+    color: rgb(204, 44, 35);
+    text-decoration: none;
+}
+
+a:hover{
+    color: rgb(216, 83, 75);
+}
+
+p,
+address {
+    color: rgb(107, 97, 97);
+}
+
+.teaser__section::after {
+    content: "";
+    width: 100%;
+    height: 48rem;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -5;
+    text-align: center;
+    background-image: url(../img/hero-bg.svg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.teaser__section {
+    margin: auto;
+    width: auto;
+    height: 48rem;
+    position: relative;
+    text-align: center;
+    /* background-image: url(../img/hero-bg.svg); */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.teaser__image {
+    margin: 0 auto 5rem;
+    padding-top: 5rem;
+}
+
+.teaser__title {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.teaser {
+    margin: 0 auto;
+    padding: 0 20rem;
+}
+
+.nav--btns {
+    padding-top: 5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.75rem;
+    justify-content: center;
+}
+
+.btns {
+    padding: 1rem 1.75rem;
+    font-size: 1rem;
+    border: 1px solid rgb(231, 51, 43);
+    cursor: pointer;
+    position: relative;
+    transition: all 0.5s ease-in-out;
+}
+
+.btn1::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-color: rgb(231, 51, 43);
+}
+
+.btn1:hover::after, .btn1:focus::after {
+    animation: x-move 1s forwards;
+}
+
+@keyframes x-move {
+    100% {
+      width: 0%;
+    }
+}
+
+.btn1 {
+    background: none;
+    color: rgb(255, 255, 255);
+}
+
+.btn1:hover {
+    color: rgb(231, 51, 43);
+    /* background-color: rgb(255, 255, 255);*/
+}
+
+.btn2::after {
+    content: '';
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+    background: rgb(231, 51, 43);
+}
+
+.btn2:hover::after,
+.btn2:focus::after {
+    animation: xy-move 1s forwards;
+}
+
+@keyframes xy-move {
+    100% {
+      width: 100%;
+    }
+}
+
+.btn2 {
+    background: none;
+    color: rgb(231, 51, 43);
+}
+
+.btn2:hover {
+    color: rgb(255, 255, 255);
+    /* background-color: rgb(231, 51, 43);*/
+}
+
+/*================
+  Page Programs
+================*/
+
+.programs__section {
+    background-image: url(../img/left_bvmv7q.png), url(../img/right_yz6hn3.png);
+    background-size: 376px, 376px;
+    background-position: -0.0625rem 16rem, 60.75rem 16rem;
+    background-repeat: no-repeat, no-repeat;
+}
+
+.page__tag_heading {
+    padding-top: 8.75rem;
+    font-size: 0.875rem;
+    text-align: center;
+    color: rgb(231, 51, 43);
+}
+
+.page__tag_tag {
+    margin-bottom: 3rem;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    text-align: center;
+    color: rgb(81, 73, 73);
+}
+
+.programs__menu {
+    padding: 2rem 4.5rem 4.5rem;
+    display: flex;
+    /* flex-wrap: wrap; */
+    gap: 2rem;
+}
+
+.programs__item {
+    width: 100%;
+    background-color: rgb(255, 250, 250);
+    padding: 3rem;
+}
+
+.programs__item img {
+    margin-bottom: 2.75rem;
+}
+
+.programs__item_p {
+    padding-bottom: 1rem;
+}
+
+.item__caption {
+    height: 12.5rem;
+}
+
+/*================
+  Footer
+================*/
+
+.page__footer {
+    margin-top: 14rem;
+}
+
+.footer__wrapper {
+    padding: 4.5rem;
+    display: flex;
+    /* gap: 4rem; */
+    justify-content: space-between;
+    /* flex-wrap: wrap; */
+    line-height: 2rem;
+}
+
+.footer__wrapper div {
+    width: 100%;
+}
+
+.footer__links h3{
+    margin-bottom: 0.5rem;
+}
+
+.social__media_icons {
+    padding-top: 0.75rem;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.social__media_icons a {
+    width: 2rem;
+}
+
+.footer__line {
+    margin: 0 4.5rem;
+    border: 0.01rem rgb(0, 0, 0) solid;
+}
+
+.copyright {   
+    margin-top: 2rem;
+    padding-bottom: 6rem;
+    text-align: center;
+}
+
+.copyright small {
+    font-size: 1rem; 
+    font-weight: 700;
+}
+
+/* WORK CONTINUES */
+
+@media (max-width: 768px) {
+
+    /* .hero-container {
+        height: auto;
+    }
+
+    img.logo-img {
+        display: block;
+        padding-top: 50px;
+        margin: auto;
+        margin-bottom: 20px;
+    }
+
+    .hero h2 {
+        font-size: 28px;
+        line-height: 34px;
+        text-align: center;
+    }
+
+    .btn-div {
+        margin-bottom: 50px;
+    }
+
+
+    button.my-btn {
+        display: block;
+        margin: auto;
+        justify-content: center;
+    }
+
+    h3.heading {
+        margin-top: 60px !important;
+    }
+
+    .footer-flex-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer-logo {
+        width: 150px;
+        margin-bottom: 15px;
+    }
+
+    .footer-flex-container h3 {
+        font-size: 24px;
+        margin-top: 20px;
+
+    } */
+}
