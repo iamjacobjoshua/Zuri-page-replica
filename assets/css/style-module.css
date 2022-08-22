@@ -1,4 +1,52 @@
 /*================
+  Page 1 Fonts
+================*/
+
+@font-face {
+    font-family: Averta;
+    src: url('../fonts/FontsFree-Net-AvertaDemoPECuttedDemo-Regular.ttf');
+}
+
+
+/*================
+  Page 2 Fonts
+================*/
+
+@font-face {
+    font-family: 'Graphik';
+    src: url('../fonts/page2/Graphik-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-display: fallback;
+    font-style: normal;
+    unicode-range: U+0020-007F;
+}
+@font-face {
+    font-family: 'Graphik';
+    src: url('../fonts/page2/Graphik-MediumItalic.woff2') format('woff2');
+    font-weight: 500;
+    font-display: fallback;
+    font-style: normal;
+    unicode-range: U+0020-007F;
+}
+@font-face {
+    font-family: 'Graphik';
+    src: url('../fonts/page2/Graphik-Semibold.woff2') format('woff2');
+    font-weight: 600;
+    font-display: fallback;
+    font-style: normal;
+    unicode-range: U+0020-007F;
+}
+@font-face {
+    font-family: 'Graphik';
+    src: url('../fonts/page2/Graphik-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-display: fallback;
+    font-style: normal;
+    unicode-range: U+0020-007F;
+}
+
+
+/*================
   CSS Reset Tool v2.0
 ================*/
 
@@ -60,7 +108,7 @@ table {
   Typography
 ================*/
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
     line-height: normal;
     letter-spacing: normal;
     font-weight: 700;
@@ -77,11 +125,18 @@ h3 {
     font-size: 1.125rem;
 }
 
+h4 {
+    font-size: 1rem;
+}
+
 small {
     font-size: 0.8rem;
     font-weight: 400;
 }
 
+/*================
+  Universal
+================*/
 
 * {
     box-sizing: border-box;
@@ -89,6 +144,10 @@ small {
 
 html {
     scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
 }
 
 img {
