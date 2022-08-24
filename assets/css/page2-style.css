@@ -1,5 +1,6 @@
 body {
     color: rgb(29, 28, 32);
+    background: rgb(255, 248, 229);
     font-size: 18px !important;
 }
 
@@ -151,7 +152,7 @@ h1, h2, h3, h4 {
 ================*/
 
 .section2 {
-    padding: 2.5rem 4.5rem 2.5rem;
+    padding: 2.5rem 4.5rem;
     margin-top: 7rem;
 }
 
@@ -182,7 +183,8 @@ h1, h2, h3, h4 {
 }
 
 .sponsor__logo {
-    width: 32rem;
+    max-width: 15rem;
+    padding: 2rem;
 }
 
 .read__link a {
@@ -198,7 +200,7 @@ h1, h2, h3, h4 {
 	margin-top: 1.5rem;
     padding: 4.5rem;
     position: relative;
-    background: url('../img/page2/Star.jpg');
+    background: url('../img/page2/Star.png');
     background-repeat: no-repeat;
     background-size: 12rem;
     background-position: 52rem 6rem;
@@ -217,17 +219,21 @@ h1, h2, h3, h4 {
 }
 
 .intro__heading {
-    width: 56%;
+    max-width: 56%;
     font-size: 2.5rem;
-    line-height: 1.25;
+    line-height: 1.5;
 }
 
 .feature__cards {
     margin-top: 1rem;
     padding-top: 2.5rem;
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
     gap: 1.75rem;
-    grid-template-columns: repeat(3, 1fr);
+}
+
+.feature__cards > * {
+    flex: 1 1 18em;
 }
 
 .feature__item {
@@ -235,12 +241,12 @@ h1, h2, h3, h4 {
     position: relative;
     border-radius: 1.25rem;
     background: rgb(255, 255, 255);
-    transition: transform 0.7s ease-in-out;
+    transition: transform 0.4s ease-in-out;
     box-shadow: 0px 0.75rem 1.25rem rgba(43, 37, 36, 0.1);
 }
 
 .feature__item:hover {
-    transform: translateY(-3.5%);
+    transform: translateY(-4%);
 }
 
 .card1 {
@@ -284,6 +290,10 @@ h1, h2, h3, h4 {
     background-size: 8rem;
 }
 
+.section4 > * {
+    flex-basis: 100%;
+}
+
 .section4::after {
 	content: "";
 	display: inline-block;
@@ -305,18 +315,15 @@ h1, h2, h3, h4 {
 
 .section4 h1 {
     font-size: 2.5rem;
-    padding-right: 4rem;
+    padding-right: 2.5rem;
 }
-
-/* .section4__col1 {
-}*/
 
 .section4 p:first-of-type {
     padding: 4rem 0 0.25rem;
 }
 
 .section4 p {
-    padding: 3rem 10rem 0 0;
+    padding: 3rem 6rem 0 0;
 }
 
 .section4__btns {
@@ -334,6 +341,11 @@ h1, h2, h3, h4 {
     font-weight: 600;
 	color: rgb(231, 51, 43);
     background: rgb(255, 255, 255);
+    transition: box-shadow 0.5s ease-in-out;
+}
+
+.section4__cta:hover {
+    box-shadow: 0 0.35rem 1.2rem rgba(43, 37, 36, 0.4);
 }
 
 .alt__btns {
@@ -366,10 +378,10 @@ h1, h2, h3, h4 {
     transition: all 0.7s ease-in-out;
 }
 
-.section4__lady {
+/* .section4__lady {
 	width: 125rem;
-    /* width: 165%; */
-}
+    /* width: 165%;
+} */
 
 /*================
   PROGRAMS SECTION
@@ -387,8 +399,8 @@ h1, h2, h3, h4 {
 
 .program__heading {
     font-size: 2.5rem;
-    line-height: 1.25;
-    width: 45%;
+    line-height: 1.5;
+    max-width: 48%;
     padding-bottom: 3.5rem;
 }
 
@@ -401,9 +413,13 @@ h1, h2, h3, h4 {
 
 .program__wrapper {
     margin-top: 3rem;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-wrap: wrap;
     gap: 1.5rem;
+}
+
+.program__wrapper > * {
+    flex: 1 1 18rem;
 }
 
 .program__card {
@@ -417,33 +433,27 @@ h1, h2, h3, h4 {
 .track__icons {
     padding: 1.5rem 0;
     display: flex;
+    flex-wrap: wrap;
     gap: 1rem;
 }
 
 .track__icons img {
-    width: 2.25rem;
+    max-width: 2.25rem;
 }
 
 .area2 img,
+.area4 img:last-child,
 .track__icons img:last-child {
-    width: 3rem;
+    max-width: 3rem;
 }
 
 .area2 img:first-child {
-    width: 4rem;
+    max-width: 4rem;
 }
 
-.area3 img:last-child {
-    width: 5rem;
-}
-
-.area4 img,
-.area6 img {
-    width: 5rem;
-}
-
-.area4 img:last-child {
-    width: 3rem;
+.area3 img:last-child,
+.area4 img, .area6 img {
+    max-width: 5rem;
 }
 
 .area5 img:nth-child(3),
@@ -475,8 +485,14 @@ h1, h2, h3, h4 {
 }
 
 .section__slice {
+    margin: 0;
     padding: 0 4.5rem;
-    color: rgba(81, 73, 73, 0.3);
+}
+
+.section__slice hr {
+    border-width: 0 0 thin;
+    border-style: solid;
+    border-color: rgba(81, 73, 73, 0.2);   
 }
 
 /*================
@@ -549,7 +565,7 @@ h1, h2, h3, h4 {
 }
 
 .faq__enquiry {
-    padding: 4.5rem 0 1rem;
+    padding: 4.5rem 4.5rem 3rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -617,12 +633,15 @@ h1, h2, h3, h4 {
 }
 
 .course__column {
-    width: 92%;
     margin: 0 auto;
     padding: 3rem 2rem 2rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-wrap: wrap;
     gap: 2.25rem;
+}
+
+.course__column > * {
+    flex: 1 1 20rem;
 }
 
 .structure__tab {
@@ -752,8 +771,16 @@ h1, h2, h3, h4 {
 ================*/
 
 .page__footer {
-    padding: 5.5rem 4.5rem 0;
+    padding: 5.5rem 4.5rem 2.5rem;
     font-size: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 3rem;
+}
+
+.page__footer > * {
+    flex: 1 1 30rem;
 }
 
 .page__footer a {
@@ -764,22 +791,28 @@ h1, h2, h3, h4 {
     font-size: 1rem;
 }
 
-.footer__row1 {
+.footer__copy {
     display: flex;
-    justify-content: space-between;
+    justify-content: end;
+}
+
+.footer__copy > * {
+    padding-left: 2.5rem;
 }
 
 .social__link {
     display: flex;
     gap: 0.5rem;
+    align-items: center;
+    justify-content: end;
 }
 
 .social__link img {
     width: 2.25rem;
 }
 
-.footer__row2 {
-    padding: 3rem 0;
-    display: flex;
-    justify-content: space-between;
+@media screen and (max-width:480px) {
+    .program__twist {
+        visibility: hidden;
+    }
 }
